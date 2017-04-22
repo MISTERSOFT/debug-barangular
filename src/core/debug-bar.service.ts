@@ -2,7 +2,7 @@ import { ConsoleComponent } from './../plugins/console/console.component';
 import { DebugBarPluginItem } from './classes';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
-import { RoutesComponent } from './../plugins/routes/routes.component';
+// import { RoutesComponent } from './../plugins/routes/routes.component';
 
 @Injectable()
 export class DebugBarService {
@@ -11,8 +11,8 @@ export class DebugBarService {
 
   constructor() {
     this.plugins = [
-      new DebugBarPluginItem(ConsoleComponent, []),
-      new DebugBarPluginItem(RoutesComponent, [])
+      new DebugBarPluginItem(ConsoleComponent, [])
+      // new DebugBarPluginItem(RoutesComponent, [])
     ];
   }
 

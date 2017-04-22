@@ -110,11 +110,11 @@ import {
       position: relative;
       top: 0.15em;
       transform: rotate(-45deg);
-      vertical-align: top;
+      vertical-align: middle;
       width: 0.45em;
     }
 
-    .chevron.bottom:before {
+    .chevron.down:before {
       top: 0;
       transform: rotate(135deg);
     }

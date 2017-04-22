@@ -5,12 +5,13 @@ Debug Barangular is a simple debug bar for Angular.
 - [Debug Barangular](#debug-barangular)
     - [How to install](#how-to-install)
     - [How to use](#how-to-use)
-    - [Plugins build-in](#plugins-build-in)
+    - [Plugin build-in](#plugin-build-in)
     - [How to implement my own plugin](#how-to-implement-my-own-plugin)
+    - [Help me to improve this project](#help-me-to-improve-this-project)
 
 ## How to install
 ```
-npm install debug-barangular
+npm install debug-barangular --save
 ```
 
 ## How to use
@@ -22,7 +23,7 @@ import { NgModule } from '@angular/core';
 import { DebugBarangularModule } from 'debug-barangular';
 
 @NgModule({
-  imports: [DebugBarangularModule]
+  imports: [DebugBarangularModule.forRoot()]
 })
 export class AppModule { }
 ```
@@ -32,9 +33,9 @@ Use the html tag "**sh-debug-bar**" into your *app.component.html* for exemple.
 <sh-debug-bar></sh-debug-bar>
 ```
 
-## Plugins build-in
+## Plugin build-in
 
-Debug Barangular comes with 2 plugins that I developed:
+Debug Barangular comes with 1 plugin :
 
 - **Console**: It's a console where you can print everything you want with the *ConsoleService*. This is not comparable with any browser console.
 
@@ -73,15 +74,14 @@ export class TestComponent implements OnInit {
 }
 ```
 
-![Image of Yaktocat](http://images.sofianehamadi.me/dev/bebug-barangular/debugbarangular1.PNG)
+![Console](http://images.sofianehamadi.me/projects/bebug-barangular/debugbarangular1.PNG)
 
-- **Routes**: Display all routes of your application with more informations like parameters, guards and redirection.
+<!--- **Routes**: Display all routes of your application with more informations like parameters, guards and redirection.-->
 
-![Image of Yaktocat](http://images.sofianehamadi.me/dev/bebug-barangular/debugbarangular2.PNG)
 
 ## How to implement my own plugin
 
-1. You have to create a Component and implement the interface **_IDebugBarPlugin_** and the decorator **_DebugBarPluginComponent_**.
+1. You have to create a Component and implement the interface **_IDebugBarPlugin_** and add the decorator **_DebugBarPluginComponent_** to your Component.
 ```typescript
 import { IDebugBarPlugin, DebugBarPluginComponent } from 'debug-barangular';
 
@@ -106,14 +106,14 @@ export class MyPluginComponent implements IDebugBarPlugin {
 import { MyPluginComponent } from './my-plugin.component';
 
 @NgModule({
-  imports: [...]
+  imports: [DebugBarangularModule.forRoot()]
   declarations: [...]
   entryComponents: [MyPluginComponent],
   bootstrap: [...]
 })
 ```
 
-3. You have to tell to the debug bar that you want create your plugin. So, into your **app.component.ts** import the **_DebugBarService_** and use the method **_addPlugins()_** and also the class **_DebugBarPluginItem_**.
+3. You have to tell to the debug bar that you want add your plugin. So, into your **app.component.ts** import the **_DebugBarService_** and use the method **_addPlugins()_** and also the class **_DebugBarPluginItem_**.
 ```typescript
 import { DebugBarService, DebugBarPluginItem } from 'debug-barangular';
 import { MyPluginComponent } from './my-plugin.component';
@@ -130,3 +130,7 @@ export class AppComponent {
   }
 }
 ```
+
+## Help me to improve this project
+
+You think that project can be better and you have any suggestion then [open an issue](https://github.com/MISTERSOFT/debug-barangular/issues) and we will discuss it :).
