@@ -1,17 +1,11 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HttpModule } from '@angular/http';
-import { RouterModule } from '@angular/router';
-
-// components
-import { DebugBarComponent } from './debug-bar.component';
-
-// services
-import { DebugBarService } from './core/debug-bar.service';
-import { ConsoleService } from './plugins/console/console.service';
-
-// components - Debug bar plugins
 import { ConsoleComponent } from './plugins/console/console.component';
+import { ConsoleService } from './plugins/console/console.service';
+import { DebugBarComponent } from './debug-bar.component';
+import { DebugBarService } from './core/debug-bar.service';
+import { HttpModule } from '@angular/http';
+import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { RoutesComponent } from './plugins/routes/routes.component';
 
 @NgModule({
