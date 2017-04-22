@@ -6,6 +6,8 @@ export default {
   moduleName: 'ng.debugbarangular',
   globals: {
     '@angular/core': 'ng.core',
+    '@angular/router': 'ng.router',
+    '@angular/http': 'ng.http',
     'rxjs/Observable': 'Rx',
     'rxjs/BehaviorSubject': 'Rx',
   }
