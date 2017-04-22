@@ -75,9 +75,11 @@ export class TestComponent implements OnInit {
 
 ## How to implement my own plugin
 
-1. You have to create a Component and implement the interface **_IDebugBarPlugin_**.
+1. You have to create a Component and implement the interface **_IDebugBarPlugin_** and the decorator **_DebugBarPluginComponent_**.
 ```typescript
-import { IDebugBarPlugin } from 'debug-barangular';
+import { IDebugBarPlugin, DebugBarPluginComponent } from 'debug-barangular';
+
+@DebugBarPluginComponent // use the decorator
 @Component({...})
 export class MyPluginComponent implements IDebugBarPlugin {
   /**
