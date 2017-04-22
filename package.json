@@ -4,5 +4,20 @@
   "description": "Debug bar for Angular 4",
   "repository": "https://github.com/MISTERSOFT/debug-barangular",
   "author": "HAMADI Sofiane",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@angular/common": "^4.0.0",
+    "@angular/core": "^4.0.0",
+    "@angular/http": "^4.0.0",
+    "@angular/router": "^4.0.0",
+    "core-js": "^2.4.1",
+    "rxjs": "^5.1.0"
+  },
+  "devDependencies": {
+    "@angular/cli": "1.0.0",
+    "@angular/compiler": "^4.0.0",
+    "@angular/compiler-cli": "^4.0.0",
+    "@types/node": "~6.0.60",
+    "typescript": "~2.2.0"
+  }
 }
