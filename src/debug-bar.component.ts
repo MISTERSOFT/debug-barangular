@@ -24,13 +24,12 @@ import {
       <div class="menu">
         <ul class="left">
           <li *ngFor="let plugin of debugBarPlugins" (click)="onTabClick(plugin.instance)">
-            <i class="mdi {{ plugin.instance.icon }} mdi-18px"></i>
             {{ plugin.instance.name }}
           </li>
         </ul>
         <ul class="right">
           <li (click)="onDisplayDebugBar()">
-            <i class="mdi mdi-chevron-double-up mdi-18px" #iconDisplayDebugBar></i>
+            <i class="chevron up" #iconDisplayDebugBar></i>
           </li>
         </ul>
       </div>
@@ -100,6 +99,25 @@ import {
 
       background-color: #fff;
     }
+
+    .chevron::before {
+      border-style: solid;
+      border-width: 0.25em 0.25em 0 0;
+      content: '';
+      display: inline-block;
+      height: 0.45em;
+      left: 0.15em;
+      position: relative;
+      top: 0.15em;
+      transform: rotate(-45deg);
+      vertical-align: top;
+      width: 0.45em;
+    }
+
+    .chevron.bottom:before {
+      top: 0;
+      transform: rotate(135deg);
+    }
   `]
 })
 export class DebugBarComponent implements OnInit {
@@ -124,8 +142,8 @@ export class DebugBarComponent implements OnInit {
     this.cssClasses = {
       hideDebugBar: 'hide',
       icons: {
-        up: 'mdi-chevron-double-up',
-        down: 'mdi-chevron-double-down'
+        up: 'up',
+        down: 'down'
       }
     };
 

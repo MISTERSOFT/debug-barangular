@@ -93,7 +93,6 @@ import { Router } from '@angular/router';
 export class RoutesComponent implements IDebugBarPlugin, OnInit {
 
   name = 'Routes';
-  icon = 'mdi mdi-routes';
   data: any;
 
   constructor(private router: Router) { }

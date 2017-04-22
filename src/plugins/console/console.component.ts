@@ -19,7 +19,6 @@ import { ConsoleService } from './console.service';
 export class ConsoleComponent implements OnInit, IDebugBarPlugin {
 
   name = 'Console';
-  icon = 'mdi-console';
   data: any;
 
   constructor(private consoleService: ConsoleService) { }
