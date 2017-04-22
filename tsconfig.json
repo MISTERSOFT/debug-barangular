@@ -1,0 +1,32 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "outDir": "dist",
+    "baseUrl": ".",
+    "sourceMap": true,
+    "declaration": true,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "target": "es5",
+    "rootDir": "src",
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "paths": {
+      "debug-barangular": ["src/index.ts"],
+      "rxjs/*": ["node_modules/rxjs/*"]
+    },
+    "inlineSources": true,
+    "lib": [
+      "es2016",
+      "dom"
+    ]
+  },
+  "files": [
+    "src/index.ts"
+  ],
+  "exclude": [
+    "node_modules/*"
+  ]
+}

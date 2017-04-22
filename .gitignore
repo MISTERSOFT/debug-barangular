@@ -19,3 +19,8 @@
 npm-debug.log
 testem.log
 /typings
+
+# dist
+dist/*
+src/**/*.ngfactory.ts
+src/**/*.ngsummary.json
