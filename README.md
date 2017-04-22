@@ -3,9 +3,15 @@
 Debug Barangular is a simple debug bar for Angular.
 
 - [Debug Barangular](#debug-barangular)
+    - [How to install](#how-to-install)
     - [How to use](#how-to-use)
     - [Plugins build-in](#plugins-build-in)
     - [How to implement my own plugin](#how-to-implement-my-own-plugin)
+
+## How to install
+```
+npm install debug-barangular
+```
 
 ## How to use
 
