@@ -16,7 +16,8 @@ import { RoutesComponent } from './plugins/routes/routes.component';
   ],
   imports: [
     CommonModule,
-    HttpModule
+    HttpModule,
+    RouterModule
   ],
   exports: [
     DebugBarComponent
