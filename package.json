@@ -5,6 +5,12 @@
   "repository": "https://github.com/MISTERSOFT/debug-barangular",
   "author": "HAMADI Sofiane",
   "license": "MIT",
+  "scripts": {
+    "transpile": "ngc",
+    "package": "rollup -c",
+    "minify": "uglifyjs dist/bundles/debugbarangular.umd.js --screw-ie8 --compress --mangle --comments --output dist/bundles/debugbarangular.umd.min.js",
+    "build": "npm run transpile && npm run package && npm run minify"
+  },
   "dependencies": {
     "@angular/common": "^4.0.0",
     "@angular/core": "^4.0.0",
@@ -18,6 +24,8 @@
     "@angular/compiler": "^4.0.0",
     "@angular/compiler-cli": "^4.0.0",
     "@types/node": "~6.0.60",
-    "typescript": "~2.2.0"
+    "rollup": "^0.41.6",
+    "typescript": "~2.2.0",
+    "uglify-js": "^2.8.22"
   }
 }
